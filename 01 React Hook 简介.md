@@ -1,6 +1,6 @@
-# 01 React Hooks 简介
+# 01 React Hook 简介
 
-首先，欢迎你来学习React Hooks，通过本教程你会了解到React Hook工作原理以及我们推荐使用Hook的理由。
+首先，欢迎你来学习React Hook，通过本教程你会了解到React Hook工作原理以及我们推荐使用Hook的理由。
 
 ## 学习前提
 
