@@ -63,8 +63,8 @@ React本身为单向数据流，即父组件可以传值给子组件，但子组
 
 第1个“难以组织”的原因：数据获取和事件订阅被分散在不同生命周期函数中。
 
-数据获取：组件第一次被挂载(componentDidMount)、组件每次更新完毕(componentDidUpdate)  
-事件监听：组件第一次被挂载(componentDidMount)、组件即将被卸载(componentWillUnmount)  
+例如数据获取：组件第一次被挂载(componentDidMount)、组件每次更新完毕(componentDidUpdate)  
+例如事件监听：组件第一次被挂载(componentDidMount)、组件即将被卸载(componentWillUnmount)  
 
 
 第2个“难以组织”的原因：内部state数据只能是整体，无法被拆分更细致  
