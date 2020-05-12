@@ -286,4 +286,4 @@ useInput的代码为：
 
 我们对之前所有学过的hook进行一次小总结。  
 
-欢迎进入下一章节：React Hook 总结
+欢迎进入下一章节：[React Hook 总结](https://github.com/puxiao/react-hook-tutorial/blob/master/17%20React%20Hook%20%E6%80%BB%E7%BB%93.md)
