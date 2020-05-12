@@ -4,7 +4,7 @@
 
 我们快速的回顾一下之前学习过的各个hook。  
 
-## react hook回顾
+## react hook 回顾
 
 ##### 定义变量  
 useState()：定义普通变量  
@@ -30,6 +30,15 @@ useDebugValue()：对react开发调试工具中的自定义hook，增加额外�
 
 ##### 自定义hook
 useCustomHook()：将hook相关逻辑代码从组件中抽离，提高hook代码可复用性
+
+
+## react hook 扩展阅读
+[附01：React基础知识](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8401%EF%BC%9AReact%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)  
+[附02：React扩展阅读](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8402%EF%BC%9AReact%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.md)
+
+
+## 信息反馈
+若有错误欢迎指正，本人微信同QQ (78657141)，或通过邮件联系：yangpuxiao@gmail.com
 
 ---
 
