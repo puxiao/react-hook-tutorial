@@ -145,4 +145,4 @@ useDebugValue(value,formatterFn)函数第1个参数为我们要额外显示的�
 能坚持到现在，真的不容易，react hook学完了，不过还需要学习如何自定义hook...   
 扶我起来，再坚持一下。  
 
-欢迎进入下一章节：自定义hook
+欢迎进入下一章节：[自定义hook](https://github.com/puxiao/react-hook-tutorial/blob/master/16%20%E8%87%AA%E5%AE%9A%E4%B9%89hook.md)
