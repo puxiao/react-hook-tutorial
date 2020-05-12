@@ -200,4 +200,4 @@ initialValue是我们自定义变量的默认值，该值可以是简单类型(n
 
 至此，关于useReducer基础用法已经讲完。
 
-欢迎进入下一章节：useReducer高级用法
+欢迎进入下一章节：[useReducer高级用法](https://github.com/puxiao/react-hook-tutorial/blob/master/09%20useReducer%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95.md)
