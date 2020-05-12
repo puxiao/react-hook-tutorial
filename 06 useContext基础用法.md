@@ -1,4 +1,4 @@
-# 04 useContext基础用法
+# 06 useContext基础用法
 
 ## useContext概念解释
 我们第三个要学习的Hook(钩子函数)是useContext，他的作用是“勾住”获取由React.createContext()创建、<XxxContext.Provider>添加设置的共享数据value值。useContext可以替代<XxxContext.Consumer>标签，简化获取共享数据的代码。  
