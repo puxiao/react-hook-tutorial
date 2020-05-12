@@ -156,4 +156,4 @@ componentDidMount、componentDidUpdate、componentWillUnmount ，当上述3个�
 
 至此，关于useEffect基础用法已经讲完。
 
-欢迎进入下一章节：useEffect高级用法
+欢迎进入下一章节：[useEffect高级用法](https://github.com/puxiao/react-hook-tutorial/blob/master/05%20useEffect%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95.md)
