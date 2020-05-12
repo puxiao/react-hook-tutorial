@@ -182,4 +182,4 @@ useContext(context)函数可以传入1个值，该值为共享数据对象的实
 
 至此，关于useContext基础用法已经讲完。
 
-欢迎进入下一章节：useContext高级用法
+欢迎进入下一章节：[useContext高级用法](https://github.com/puxiao/react-hook-tutorial/blob/master/07%20useContext%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95.md)
