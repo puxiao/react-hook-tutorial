@@ -117,4 +117,4 @@ Hooks解决方式：
 
 至此，你对Hook有了一个初步概念，接下来开始学习第1个Hook函数 useState。
 
-欢迎进入下一章节：useState基础用法
+欢迎进入下一章节：[useState基础用法](https://github.com/puxiao/react-hook-tutorial/blob/master/02%20useState%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)
