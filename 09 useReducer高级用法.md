@@ -221,4 +221,4 @@
 
 目前已经学习过的4个Hook函数useState、useEffect、useContext、useReducer，他们都是用来实现组件某些具体业务功能的，而接下来要学习的Hook函数则是用来提高组件整体性能的，例如第5个Hook函数useCallback和第6个Hook函数useMemo。
 
-欢迎进入下一章节：useCallback基本用法  
+欢迎进入下一章节：[useCallback基本用法](https://github.com/puxiao/react-hook-tutorial/blob/master/10%20useCallback%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
