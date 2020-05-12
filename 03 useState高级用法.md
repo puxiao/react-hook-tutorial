@@ -260,4 +260,4 @@ useState是本系列文章讲解的第一个Hook函数，同时也是使用频�
 
 接下来学习第2个Hook函数useEffect。
 
-欢迎进入下一章节：useEffect基本用法  
+欢迎进入下一章节：[useEffect基本用法](https://github.com/puxiao/react-hook-tutorial/blob/master/04%20useEffect%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
