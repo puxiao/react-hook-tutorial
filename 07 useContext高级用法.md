@@ -68,4 +68,4 @@
 
 接下来学习第4个Hook函数useReducer。
 
-欢迎进入下一章节：useReducer基本用法  
+欢迎进入下一章节：[useReducer基本用法](https://github.com/puxiao/react-hook-tutorial/blob/master/08%20useReducer%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
