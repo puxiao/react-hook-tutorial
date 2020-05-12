@@ -133,4 +133,4 @@ setA(a => ...)  这是在 03 useState高级用法中，解决数据异步 时讲
 
 接下来学习第3个Hook函数useContext。
 
-欢迎进入下一章节：[useContext基本用法](https://github.com/puxiao/react-hook-tutorial/edit/master/06%20useContext%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
+欢迎进入下一章节：[useContext基本用法](https://github.com/puxiao/react-hook-tutorial/blob/master/06%20useContext%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)
