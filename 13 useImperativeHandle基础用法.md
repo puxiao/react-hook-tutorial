@@ -170,4 +170,4 @@ react为单向数据流，如果为了实现这个效果，我们完全可以把
 
 至此，关于useImperativeHandle基础用法已经讲完，没有高级用法，直接进入下一个Hook。
 
-欢迎进入下一章节：useLayoutEffect基础用法
+欢迎进入下一章节：[useLayoutEffect基础用法](https://github.com/puxiao/react-hook-tutorial/blob/master/14%20useLayoutEffect%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)
