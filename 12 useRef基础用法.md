@@ -336,4 +336,4 @@ React.forwardRef()包裹住要输出的组件，且将第2个参数设置为 ref
 
 至此，关于useRef()基础用法、React.forwardRef()已经讲完。 这2个函数的掌握，会对下一个要讲的Hook：useImperativeHandle 非常有用。  
 
-欢迎进入下一章节：useImperativeHandle基础用法。
+欢迎进入下一章节：[useImperativeHandle基础用法](https://github.com/puxiao/react-hook-tutorial/blob/master/13%20useImperativeHandle%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)
