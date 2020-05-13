@@ -3,7 +3,7 @@
 ## 自定义hook概念解释
 像useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、useImperativeHandle、useLayoutEffect、useDebugValue这10个hook是react默认自带的hook，而所谓自定义hook就是由我们自己编写的hook。  
 
-所谓自定义hook就是把原来写在函数组件内的hook相关代码抽离出来，单独定义成一个函数，而这个抽离出来的hook函数就称之为“自定义hook函数”，简称“自定义hook”。
+所谓自定义hook就是把原来写在函数组件内的hook相关代码抽离出来，单独定义成一个函数，而这个抽离出来的hook函数就称之为“自定义hook钩子函数”，简称“自定义hook”。
 
 
 ## 自定义hook是来解决什么问题的？
