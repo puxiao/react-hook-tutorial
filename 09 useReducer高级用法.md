@@ -169,26 +169,26 @@
     import CountContext from './CountContext';
 
     function CopmpoentA() {
-    const [param,setParam] = useState(1);
-    //引入全局共享对象，获取全局变量count，以及修改count对应的dispatch
-    const countContext = useContext(CountContext);
+      const [param,setParam] = useState(1);
+      //引入全局共享对象，获取全局变量count，以及修改count对应的dispatch
+      const countContext = useContext(CountContext);
 
-    const inputChangeHandler = (eve) => {
+      const inputChangeHandler = (eve) => {
         setParam(eve.target.value);
-    }
+      }
 
-    const doHandler = () => {
+      const doHandler = () => {
         //若想修改全局count，先获取count对应的修改抛出事件对象dispatch，然后通过dispatch将修改内容抛出
         //抛出的修改内容为：{type:'add',param:xxx}，即告诉count的修改事件处理函数，本次修改的类型为add，参数是param
         //这里的add和param完全是根据自己实际需求自己定义的
         countContext.dispatch({type:'add2',param:Number(param)});
-    }
+      }
 
-    const resetHandler = () => {
+      const resetHandler = () => {
         countContext.dispatch({type:'reset'});
-    }
+      }
 
-    return <div>
+      return <div>
             ComponentA - count={countContext.count}
             <input type='number' value={param} onChange={inputChangeHandler} />
             <button onClick={doHandler}>add {param}</button>
