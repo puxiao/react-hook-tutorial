@@ -141,8 +141,7 @@
         {JSON.stringify(person)}
       </div>
     }
-
-export default Component;
+    export default Component;
 
 
 ## 数据类型为Array，修改方法
