@@ -168,7 +168,7 @@ initialValue是我们自定义变量的默认值，该值可以是简单类型(n
         default:
           console.log('what?');
           return state;
-    }
+      }
     }
 
     function getRandom(){
