@@ -42,9 +42,9 @@
     import {useState} from 'react'；
     function useCount(initialValue){
 
-      //使用默认的useState hook函数创建count
+      //依然使用 useState 创建countcount和setCount
       //并且将参数initialValue的值赋予给count作为默认值
-      //将定义好的count和setCount作为函数返回值 return 出去
+      //将创建好的count和setCount作为函数返回值 return 出去
 
       const [count,setCount] = useState(initialValue);
       return [count,setCount];
