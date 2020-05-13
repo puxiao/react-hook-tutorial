@@ -54,7 +54,7 @@ React.memo()的使用方法很简单，就是把要导出的函数组件包裹�
 
     import React from 'react'
     function Xxxx() {
-    return <div>xx</div>;
+      return <div>xx</div>;
     }
     export default React.memo(Xxxx); //使用React.memo包裹住要导出的函数组件
 
