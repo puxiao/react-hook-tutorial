@@ -1,7 +1,7 @@
 # 13 useImperativeHandle基础用法
 
 ## useImperativeHandle概念解释
-我们第八个要学习的Hook(钩子函数)是useImperativeHandle，他的作用是“勾住”子组件中某些定义的函数(方法)供父组件调用。  
+我们第八个要学习的Hook(钩子函数)是useImperativeHandle，他的作用是“勾住”子组件中某些函数(方法)供父组件调用。  
 
 先回顾一下之前学到的。  
 第1个知识点：  
