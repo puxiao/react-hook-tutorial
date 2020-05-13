@@ -234,8 +234,8 @@ useInput的代码为：
     import React from 'react'
     import useInput from './useInput';
     function LoginForm() {
-      const [usename,resetUsename,bindUsename] = useInput(''); //定义用户名输入框对应的变量
-      const [password,resetPassword,bindPassword] = useInput(''); //定义密码输入框对应的变量
+      const [usename,resetUsename,bindUsename] = useInput(''); //定义用户名输入框相关的变量
+      const [password,resetPassword,bindPassword] = useInput(''); //定义密码输入框相关的变量
 
       const submitHandle = (eve) => {
         eve.preventDefault(); //阻止form真正提交
