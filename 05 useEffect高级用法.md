@@ -58,13 +58,13 @@
 
 再看看 react 给我们的错误警告提示：You can also do a functional update 'setA(a => ...)' if you only need 'a' in the 'setA' call.  你可能会用到 setA(a => ...) 这种方式来更新a的值。
 
-setA(a => ...)  这是在 03 useState高级用法中，解决数据异步 时讲的更新方式。
+setA(a => ...)  这是在 “03 useState高级用法”中，解决数据异步 时讲的更新方式。
 
 那我们就按照提示，将那行代码修改为：  
 
     let timer = setInterval(() => {setA(a => a+1)},1000);  
 
-再次执行，错误提示警告没有了，组件也完全按照我们的预期来执行了。  
+再次执行，错误提示警告没有了，组件也完全按照我们的预期来执行了。react自带的语法检查真的好智能。    
 
 ##### 为什么会有这个问题？
 关于刚才setInterval中累加 a 的值遇到的问题，React官方文档中也有类似示例，只不过他们用的变量是count，而我们这里用的变量是 a。
