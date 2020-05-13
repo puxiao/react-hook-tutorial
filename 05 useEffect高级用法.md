@@ -45,10 +45,10 @@
 ？  
 小朋友，脸上是否有很多问号？？？  
 
-上述代码会收到react的一个错误警告提示：Either include it or remove the dependency array. You can also do a functional update 'setA(a => ...)' if you only need 'a' in the 'setA' call.  
-该错误警告意思是：如果你确认你传入的第2个参数是空数组，那么你可能会用到 setA(a => ...) 这种方式来更新a的值。
+实际运行会发现，当组件挂载后，确实会执行一次 setA(a+1)，a 的值修改为了 1，然后... a 的值一直为 1，并没有继续累加。  
 
-实际运行会发现，当组件挂载后，确实会执行一次 setA(a+1)，a 的值修改为了 1，然后... a 的值一直为 1，并没有继续累加。
+上述代码会收到react的一个错误警告提示：Either include it or remove the dependency array. You can also do a functional update 'setA(a => ...)' if you only need 'a' in the 'setA' call.  
+该错误警告意思是：如果你确认你传入的第2个参数是空数组，那么你可能会用到 setA(a => ...) 这种方式来更新a的值。  
 
 问题出在哪里？  
 
