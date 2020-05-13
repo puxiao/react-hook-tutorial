@@ -11,10 +11,10 @@
 [useReducer()](https://github.com/puxiao/react-hook-tutorial/blob/master/08%20useReducer%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：定义有不同类型、参数的变量  
 
 ##### 组件传值
-[useContext()](https://github.com/puxiao/react-hook-tutorial/blob/master/06%20useContext%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：定义和接收具有全局性质的属性传值对象
+[useContext()](https://github.com/puxiao/react-hook-tutorial/blob/master/06%20useContext%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：定义和接收具有全局性质的属性传值对象，需要配合React.createContext()使用
 
 ##### 对象引用
-[useRef()](https://github.com/puxiao/react-hook-tutorial/blob/master/12%20useRef%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取渲染后的DOM元素对象，可调用该对象原生html的方法  
+[useRef()](https://github.com/puxiao/react-hook-tutorial/blob/master/12%20useRef%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取渲染后的DOM元素对象，可调用该对象原生html的方法，可能需要配合React.forwardRef()使用  
 [useImperativeHandle()](https://github.com/puxiao/react-hook-tutorial/blob/master/13%20useImperativeHandle%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取和调用渲染后的DOM元素对象拥有的自定义方法
 
 ##### 生命周期
@@ -22,7 +22,7 @@
 [useLayoutEffect()](https://github.com/puxiao/react-hook-tutorial/blob/master/14%20useLayoutEffect%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：挂载或渲染完成后，同步调度  
 
 ##### 性能优化
-[useCallback()](https://github.com/puxiao/react-hook-tutorial/blob/master/10%20useCallback%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取某处理函数的引用  
+[useCallback()](https://github.com/puxiao/react-hook-tutorial/blob/master/10%20useCallback%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取某处理函数的引用，需要配合React.memo()使用  
 [useMemo()](https://github.com/puxiao/react-hook-tutorial/blob/master/11%20useMemo%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取某处理函数返回值的副本  
 
 ##### 代码调试
