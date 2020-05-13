@@ -222,7 +222,7 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 
     function Component() {
       const [count,setCount] =  useState(0);
-      const timerRef = useRef(null);//先定义一个timerRef变量，用于“勾住”useEffect中通过setIntervale创建的计时器
+      const timerRef = useRef(null);//先定义一个timerRef引用变量，用于“勾住”useEffect中通过setIntervale创建的计时器
 
       useEffect(() => {
         //将timerRef.current与setIntervale创建的计时器进行“挂钩”
