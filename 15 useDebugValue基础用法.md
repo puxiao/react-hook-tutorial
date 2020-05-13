@@ -1,7 +1,7 @@
 # 15 useDebugValue基础用法
 
 ## useDebugValue概念解释
-我们第十个要学习的Hook(钩子函数)是useDebugValue，他的作用是“勾住”React开发调试工具中的自定义hook标签，让useDebugValue勾住的自定义hook显示额外的信息。  
+我们第十个要学习的Hook(钩子函数)是useDebugValue，他的作用是“勾住”React开发调试工具中的自定义hook标签，让useDebugValue勾住的自定义hook可以显示额外的信息。  
 
 ##### “React开发调试工具”是什么？  
 答：谷歌浏览器中的一个扩展插件，名字叫“React Developer Tools”，方便我们在谷歌浏览器上进行react项目调试。  
