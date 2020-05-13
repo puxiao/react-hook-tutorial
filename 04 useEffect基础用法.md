@@ -115,7 +115,7 @@ componentDidMount、componentDidUpdate、componentWillUnmount ，当上述3个�
 ##### '[deps]'补充说明：  
 1、若缺省，则组件挂载、组件重新渲染、组件即将被卸载前，每一次都会触发该useEffect；  
 3、若传值，则必须为数组，数组的内容是函数组件中通过useState自定义的变量或者是父组件传值过来的props中的变量，告诉React只有数组内的变量发生变化时才会触发useEffect；  
-4、若传值，但是传的是空数组 []，则表示该useEffect里的内容仅会在“第一次挂载后和组件即将被卸载前”执行；    
+4、若传值，但是传的是空数组 []，则表示该useEffect里的内容仅会在“第一次挂载后和组件即将被卸载前”执行一次；    
 
 
 ## useEffect使用示例：  
