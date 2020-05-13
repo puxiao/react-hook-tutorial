@@ -46,7 +46,7 @@
 
 请注意：React.PureComponent会对props上所有可枚举属性做一遍浅层对比。而不像 shouldComponentUpdate中可以有针对性的只对某属性做对比。  
 
-上面将的都是类组件，与之对应的是React.memo()，这个是针对函数组件的，作用和React.PureComponent完全相同。  
+上面讲的都是类组件，与之对应的是React.memo()，这个是针对函数组件的，作用和React.PureComponent完全相同。  
 
 React.memo()的使用方法很简单，就是把要导出的函数组件包裹在React.memo中即可。  
 
