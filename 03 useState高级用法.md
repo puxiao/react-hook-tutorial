@@ -75,7 +75,7 @@
 补充说明：你可以将prevData修改成任意你喜欢的变量名称，比如prev，只需要确保和后面return里的一致即可。  
 
 
-## 数据类型为Objcet，修改方法
+## 数据类型为Objcet的修改方法
 
 之前的示例中，每个useState对应的值都是简单的string或number，如果对应的值是object，又该如何处理呢？  
 
@@ -144,7 +144,7 @@
     export default Component;
 
 
-## 数据类型为Array，修改方法
+## 数据类型为Array的修改方法
 
 和数据类型为Object相似，都是需要通过先拷贝一次，修改后再整体赋值。  
 
