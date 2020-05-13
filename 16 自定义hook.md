@@ -139,7 +139,7 @@ useDocumentTitle 代码如下：
 1、添加 add()  
 2、减去 sub()  
 3、相乘 mul()  
-4、回复初始值 reset()  
+4、恢复初始值 reset()  
 
 修改后的useCount代码为：  
 
