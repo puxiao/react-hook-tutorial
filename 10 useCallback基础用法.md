@@ -140,7 +140,7 @@ useCallback可以将组件的某些处理函数挂载到react底层原型链上�
 
 以上是代码仅仅是为了示意默认子组件为什么会被迫重新渲染，以及useCallback作用机理。   
 
-只有理解了这个机理，才会明白何时使用useCallback。  不要滥用useCallback。
+只有理解了这个机理，才会明白何时使用useCallback。  切记不要滥用useCallback。
 
 多说一句：你是否觉得React Hook 很绕？ 对，这就是Hook学习起来难度大的一些原因，但当你充分理解React的编程哲学思想后，用起来会如鱼得水。加油！  
 
