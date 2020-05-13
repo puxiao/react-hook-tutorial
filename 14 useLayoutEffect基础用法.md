@@ -28,7 +28,7 @@ useLayoutEffect永远要比useEffect先触发完成。
 如果你不使用useLayoutEffect，那么之后就应该调用useEffect。  
 
 补充说明：  
-1、优先使用useEffect，useEffect无法满足需求了再考虑使用useLayoutEffect。  
+1、优先使用useEffect，useEffect无法满足需求时再考虑使用useLayoutEffect。  
 2、useLayoutEffect先触发，useEffect后触发。  
 3、useEffect和useLayoutEffect在服务器端渲染时，都不行，需要寻求别的解决方案。  
 
