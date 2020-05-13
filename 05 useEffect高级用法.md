@@ -33,7 +33,7 @@
       //定义第2个useEffect，专门用来处理网页标题更新
       useEffect(() => {
         document.title = `${a} - ${Math.floor(Math.random()*100)}`;
-      })
+      },[a])
       return <div> {a} </div>
     }
 
