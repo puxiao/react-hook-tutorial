@@ -93,7 +93,7 @@
 1、用React.createContext()定义一个全局数据对象；  
 2、在父组件中用 userReducer 定义全局变量xx和负责抛出修事件的dispatch；  
 3、在父组件之外，定义负责具体修改全局变量的处理函数reducer，根据修改xx事件类型和参数，执行修改xx的值；  
-4、在父组件中用 <XxxContext.Provider value={{xx,dispathc}}> 标签把 全局共享数据和负责抛出修改xx的dispatch；  
+4、在父组件中用 <XxxContext.Provider value={{xx,dispathc}}> 标签把 全局共享数据和负责抛出修改xx的dispatch 暴露给子组件；  
 5、在子组件中用 useContext 获取全局变量；  
 6、在子组件中用 xxContext.dispatch 去抛出修改xx的事件，携带修改事件类型和参数；  
 
