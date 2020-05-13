@@ -58,8 +58,8 @@ React.memo()的使用方法很简单，就是把要导出的函数组件包裹�
     }
     export default React.memo(Xxxx); //使用React.memo包裹住要导出的函数组件
 
-请记住以下2点：
-1、React.memo()只会帮我们做浅层对比，例如props.name='puxiao'或props.list=[1,2,3]，如果是props中包含复杂的数据结构，例如props.obj.list=[{age:34}]，那么有可能达不到你的预期，无法做到深层次对比。  
+请记住以下2点：  
+1、React.memo()只会帮我们做浅层对比，例如props.name='puxiao'或props.list=[1,2,3]，如果是props中包含复杂的数据结构，例如props.obj.list=[{age:34}]，那么有可能达不到你的预期，因为不会做到深层次对比。  
 2、使用React.memo仅仅是让该函数组件具备了可以跳过本次渲染的基础，若组件在使用的时候属性值中有某些处理函数，那么还需要配合useCallback才可以做到跳过本次重新渲染。  
 
 呵，话题又回到useCallback上面了。
