@@ -56,8 +56,7 @@
 假设通过useRef获得了该对象的引用，那么当react组件重新渲染后，如何保证该引用不丢失？  
 答：react在底层帮我们做了这个工作，我们只需要相信之前的引用可以继续找到目标对象即可。
 
-请注意：React.createRef()也有useRef相似效果，但是React.createRef就不保证该“引用在组件整个生命周期中都固定不变”。
-
+请注意：React.createRef()也有useRef相似效果，但是React.createRef无法全部适用上面提到的3种情况。  
 
 让我们回到useRef基础学习中。
 
