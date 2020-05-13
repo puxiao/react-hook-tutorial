@@ -29,7 +29,7 @@
 
     useEffect(() => {
         let timer = setInterval(() => {
-            setCount((prevData) => { return prevData +1});
+            setCount(prevData => prevData +1);
         }, 1000);
         return () => {
             clearInterval(timer);
