@@ -274,7 +274,7 @@ useInput的代码为：
 
 这里面的 {...bindUsename}  {...bindPassword} 其实相当于把 bindUsename 和 bindPassword 进行了解构，就好像直接写在这里似的。  
 
-如果<input\>中有非常多相同的属性，那么把这些属性头提炼到 useInput的bind中，这样可以简化组件里的代码。  
+如果<input\>中有非常多相同的属性，那么把这些相同属性提炼到 useInput 的 bind 中，这样可以简化组件里的代码。  
 
 应用场景小总结：  
 1、在自定义hook中，将组件需要的多项属性合并成一个对象，供组件属性解构使用，会简化组件代码，提高代码复用率。  
