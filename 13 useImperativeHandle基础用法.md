@@ -63,7 +63,12 @@ useImperativeHandle(ref,create,[deps])函数前2个参数为必填项，第3个�
     }
     useImperativeHandle(ref,() => ({xxx}));
 
-上述代码中，useImperativeHandle(ref,() => ({addCount})) 其实是 useImperativeHandle(ref,() => {return {addCount}})的简写形式。  
+上述代码中，useImperativeHandle(ref,() => ({xxx})) 其实是 useImperativeHandle(ref,() => {return {xxx:xxx}})的简写。  
+
+特别注意：() => ({xxx}) 不可以再简写成 () => {xxx}，如果这样写会直接react报错。  
+因为这两种写法意思完全不一样：  
+1、() => ({xxx}) 表示 返回一个object对象，该对象为{xxx}  
+2、() => {xxx} 表示 执行 xxx 语句代码  
 
 
 ##### 拆解说明：  
