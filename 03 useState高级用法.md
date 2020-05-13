@@ -64,6 +64,7 @@
 
     for(let i=0; i<3; i++){
       setCount(prevData => {return prevData+1});
+      //可以简化为 setCount(prevData => prevData+1);
     }
 
 代码分析：  
