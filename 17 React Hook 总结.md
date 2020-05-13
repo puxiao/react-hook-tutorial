@@ -15,7 +15,7 @@
 
 ##### 对象引用
 [useRef()](https://github.com/puxiao/react-hook-tutorial/blob/master/12%20useRef%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取渲染后的DOM元素对象，可调用该对象原生html的方法，可能需要配合React.forwardRef()使用  
-[useImperativeHandle()](https://github.com/puxiao/react-hook-tutorial/blob/master/13%20useImperativeHandle%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取和调用渲染后的DOM元素对象拥有的自定义方法
+[useImperativeHandle()](https://github.com/puxiao/react-hook-tutorial/blob/master/13%20useImperativeHandle%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：获取和调用渲染后的DOM元素对象拥有的自定义方法，必须配合React.forwardRef()使用 
 
 ##### 生命周期
 [useEffect()](https://github.com/puxiao/react-hook-tutorial/blob/master/04%20useEffect%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)：挂载或渲染完成后、即将被卸载前，调度  
