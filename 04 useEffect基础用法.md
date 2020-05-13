@@ -110,7 +110,7 @@ componentDidMount、componentDidUpdate、componentWillUnmount ，当上述3个�
 3、第2个参数 [deps]，为可选参数，若有值则向React表明该useEffect是依赖哪些变量发生改变而触发的；
 
 #### 'effect'补充说明
-1、若你不需要在组件卸载前执行任何代码，那么可以忽略不写 effect 中的 return 以及返回函数；
+1、若你不需要在组件卸载前执行任何代码，那么可以忽略不写 effect 中的 return相关代码；
 
 ##### '[deps]'补充说明：  
 1、若缺省，则组件挂载、组件重新渲染、组件即将被卸载前，每一次都会触发该useEffect；  
