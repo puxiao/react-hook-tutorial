@@ -109,7 +109,7 @@ useDebugValue(value,formatterFn)函数第1个参数为我们要额外显示的�
 3、第2个参数是对time的一个格式化函数。由于time实际为一个时间戳数字，通过time => new Date(time)将时间戳转化成具体的可读时间字符串，例如此时此刻：Mon May 11 2020 14:27:39 GMT+0800 (中国标准时间)
 
 
-##### 具体表现？  
+##### 具体表现  
 在谷歌浏览器调试面板的“Component”右侧，你会看到：  
 
     hooks  
