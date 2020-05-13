@@ -12,7 +12,7 @@ useLayoutEffect永远要比useEffect先触发完成。
 那通常在useLayoutEffect阶段我们可以做什么呢？  
 答：在触发useLayoutEffect阶段时，页面全部DOM已经渲染完成，此时可以获取当前页面所有信息，包括页面显示布局等，你可以根据需求修改调整页面。  
 
-请注意，useLayoutEffect对页面的修改调整可能会触发组件重新渲染，如果是对DOM进行一些样式调整是不会触发重新渲染的。  
+请注意，useLayoutEffect对页面的某些修改调整可能会触发组件重新渲染。如果是对DOM进行一些样式调整是不会触发重新渲染的。这点和useEffect是相同的。  
 
 在react官方文档中，明确表示只有在useEffect不能满足你组件需求的情况下，才应该考虑使用useLayoutEffect。  官方推荐优先使用useEffect。  
 
