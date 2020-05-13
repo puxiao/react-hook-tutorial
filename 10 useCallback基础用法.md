@@ -160,7 +160,8 @@ useCallback可以将组件的某些处理函数挂载到react底层原型链上�
 上述代码看不懂没关系，本系列教程只是讲述“如何使用Hook”，并不是“Hook源码分析”。^_^  
 不过请注意第2个参数，deps为该函数依赖的数据变量，值为Array<mixed> 或 void 或 null。 意味着如果该函数没有依赖的情况下，可以传入空数组[]或void或null。个人建议是传入空数组。  
 
-补充一点TypeScript知识(因为我最近刚学了T)：像 <T\>(callback:T):T 这种类型定义称为“泛型”，里面 T 的含义为“一模一样的同类型”。  
+补充一点TypeScript知识(因为我最近刚学了TypeScript)：  
+像 <T\>(callback:T):T 这种类型定义称为“泛型”，里面 T 的含义为“一模一样的同类型”。  
 举例：  
 1、若T为function，即参数callback类型为function，那么函数返回值也为function。  
 2、若T为object，即参数callback类型为object，那么函数返回值也为object。  
