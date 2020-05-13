@@ -23,10 +23,10 @@ react属于单向数据流，父组件可以通过属性传值，将父组件内
 
 补充说明：  
 1、useRef创建引用变量  
-2、React.forwardRef将引用变量传递给子组件
-3、useImperativeHandle将子组件内定义的函数暴露给父组件的ref。  
+2、React.forwardRef将引用变量传递给子组件  
+3、useImperativeHandle将子组件内定义的函数作为属性，添加到父组件中的ref对象上。  
 
-因此，通常如果使用useImperativeHandle，那么还要结合useRef、React.forwardRef一起使用。   
+因此，如果想使用useImperativeHandle，那么还要结合useRef、React.forwardRef一起使用。   
 
 
 ## useImperativeHandle函数源码：  
