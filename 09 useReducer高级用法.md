@@ -181,7 +181,7 @@
         //若想修改全局count，先获取count对应的修改抛出事件对象dispatch，然后通过dispatch将修改内容抛出
         //抛出的修改内容为：{type:'add',param:xxx}，即告诉count的修改事件处理函数，本次修改的类型为add，参数是param
         //这里的add和param完全是根据自己实际需求自己定义的
-        countContext.dispatch({type:'add2',param:Number(param)});
+        countContext.dispatch({type:'add',param:Number(param)});
       }
 
       const resetHandler = () => {
