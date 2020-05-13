@@ -11,7 +11,7 @@
 2、在父组件中添加共享数据对象的引用，通过且只能通过<XxxContext.provider value={{xx:'xxx'}}></XxxContext.provider>的形式将数据传递给子组件。请注意传值必须使用value={obj}这种形式；  
 3、若下一层的子组件用不到共享数据对象中的数据，则可以不做任何属性标签传递；  
 4、若某一层的子组件需要用到共享数据对象的数据，则可通过<XxxContext.Consumer></XxxContext.Consumer>获取到数据；  
-5、在类组件中除了<XxxContext.Consumer>标签，还有另外一种获取共享数据方式：static xxx = XxxContext;  
+5、在类组件中除了<XxxContext.Consumer>标签，还有另外一种获取共享数据方式：static xxx = XxxContext; 但是这种形式在函数组件中无法使用。  
 
 简而言之<XxxContext.Provider>用来添加共享数据、<XxxContext.Consumer>用来获取共享数据。  
 备注：provider单词本意为供应者、consumer单词本意为消费者，刚好对应他们相对于共享数据的关系。  
