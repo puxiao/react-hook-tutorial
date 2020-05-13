@@ -7,11 +7,11 @@
 
 我是2020年4月才开始接触学习React的，起初摆在我面前的问题是该学习Vue还是React？  
 
-关于Vue和React，有以下2条结论：  
+网上关于Vue和React，有以下2条论断：  
 1、Vue相当于扩展了html、而React相当于扩展了js。  
 2、如果你希望快速构建应用，那么应选择Vue、如果你希望构建复杂的应用，那么应选择React。
 
-在做了一些了解后，我决定选择学习React。 不是Vue不好，而是据我了解，国内一线大厂更多选择使用React。
+在做了一些了解后，我决定选择学习React。不是Vue不好，而是据我了解，国内一线大厂使用React的更多一些。  
 
 
 ## 学习 React Hook 过程
@@ -27,7 +27,7 @@
 
 其中useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、自定义Hook这些知识都来自这门课程。  
 
-在后期学习useImperativeHandle、useLayoutEffect、useDebugValue几个Hook时，感谢 Bitovi 专栏下的 “React Hooks — The Weird Ones” 视频讲解。
+后期学习的useImperativeHandle、useLayoutEffect、useDebugValue这些知识来自于 Bitovi 专栏下的 “React Hooks — The Weird Ones” 视频课程。
 
 ## 为什么要写？
 在学习每一个Hook过程中，通常我是这样进行的：  
