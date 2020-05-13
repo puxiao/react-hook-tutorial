@@ -19,7 +19,7 @@ react属于单向数据流，父组件可以通过属性传值，将父组件内
 
 
 ## useImperativeHandle是来解决什么问题的？
-答：useImperativeHandle可以让父组件获取并执行子组件内自定义函数的。本质上其实是子组件将自己内部的函数通过useImperativeHandle添加到父组件中useRef定义的对象中。  
+答：useImperativeHandle可以让父组件获取并执行子组件内某些自定义函数(方法)。本质上其实是子组件将自己内部的函数(方法)通过useImperativeHandle添加到父组件中useRef定义的对象中。  
 
 补充说明：  
 1、useRef创建引用变量  
