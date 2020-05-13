@@ -3,7 +3,7 @@
 ## useReducer概念解释
 我们第四个要学习的Hook(钩子函数)是useReducer，他的作用是“勾住”某些自定义数据对应的dispatch所引发的数据更改事件。useReducer可以替代useState，实现更为复杂逻辑的数据修改。  
 
-在React 16.8版本以前，通常需要使用第三方Redux来管理React的公共数据，但自从 React Hook 概念出现以后，可以使用 useContext + useRedux 轻松实现 Redux 相似功能。这一部分会在 useReducer高级用法 中做详细讲解。  
+在React 16.8版本以前，通常需要使用第三方Redux来管理React的公共数据，但自从 React Hook 概念出现以后，可以使用 useContext + useRedux 轻松实现 Redux 相似功能。这一部分会在 “useReducer高级用法” 中做详细讲解。  
 
 让我们回到useContext基础学习中。
 
