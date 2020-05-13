@@ -22,7 +22,7 @@ useLayoutEffect永远要比useEffect先触发完成。
 
 
 ## useLayoutEffect是来解决什么问题的？
-答：useLayoutEffect的目的是“当页面挂载或渲染完成时，再给你一次机会对页面进行修改”。  
+答：useLayoutEffect的作用是“当页面挂载或渲染完成时，再给你一次机会对页面进行修改”。  
 
 如果你选择使用useLayoutEffect，对页面进行了修改，更改样式不会引发重新渲染，但是修改变量则可能会触发再次渲染。  
 如果你不使用useLayoutEffect，那么之后就应该调用useEffect。  
