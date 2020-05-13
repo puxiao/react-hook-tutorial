@@ -158,16 +158,16 @@ initialValue是我们自定义变量的默认值，该值可以是简单类型(n
     function reducer(state,action){
       //根据action.type来判断该执行哪种修改
       switch(action.type){
-      case 'add':
-        //count 最终加多少，取决于 action.param 的值
-        return state + action.param;
-      case 'sub':
-        return state - action.param;
-      case 'mul':
-        return state * action.param;
-      default:
-        console.log('what?');
-        return state;
+        case 'add':
+          //count 最终加多少，取决于 action.param 的值
+          return state + action.param;
+        case 'sub':
+          return state - action.param;
+        case 'mul':
+          return state * action.param;
+        default:
+          console.log('what?');
+          return state;
     }
     }
 
