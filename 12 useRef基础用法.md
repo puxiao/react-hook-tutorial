@@ -144,7 +144,7 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
     import React,{useEffect,useRef} from 'react'
 
     function Component() {
-      //先定义一个inputRef变量，用于“勾住”挂载网页后的输入框
+      //先定义一个inputRef引用变量，用于“勾住”挂载网页后的输入框
       const inputRef = useRef(null);
 
       useEffect(() => {
