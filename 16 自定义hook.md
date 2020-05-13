@@ -72,7 +72,7 @@
 2、组件需要使用 useCount，只需先引入useCount，然后把 useCount 当成普通函数使用就好了。  
 3、useCount就是我们自定义的hook。   
 
-注意：一般自定义hook顶部是不需要引入React的，只需要引入对应的 hook 函数即可。  
+注意：一般自定义hook顶部是不需要引入React的，只需要引入使用到的 hook 函数即可。  
 例如上面 useCount 顶部，我们写的是 import {useState} from 'react' 而不是 import React,{useState} from 'react'；  
 
 上面举例中的useCount非常简单，内部并没有过多逻辑，在实际开发中自定义hook内部肯定要有比较复杂的逻辑。由于是单独定义的，所以自定义hook可以同时被多个组件引入和使用，达到代码复用的目的。
