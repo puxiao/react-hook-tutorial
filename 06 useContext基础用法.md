@@ -78,7 +78,7 @@
 
 ## useContext基本用法
 
-useContext(context)函数可以传入1个值，该值为共享数据对象的实例，useContext函数会返回该共享对象实例的value值。  
+useContext(context)函数可以传入1个参数，该参数为共享数据对象的实例，useContext函数会返回该共享对象实例的value值。  
  
 
 ##### 代码形式：  
