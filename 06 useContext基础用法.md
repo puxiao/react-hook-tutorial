@@ -120,7 +120,7 @@ useContext(context)函数可以传入1个参数，该参数为共享数据对象
     //global-context.js
     import React from 'react';
     const GlobalContext = React.createContext(); //请注意，这里还可以给React.createContext()传入一个默认值
-    //例如：const GlobalContext = React.createContext({name:'Yang',ageL18})
+    //例如：const GlobalContext = React.createContext({name:'Yang',age:18})
     //假如<GlobalContext.Provider>中没有设置value的值，就会使用上面定义的默认值
     export default GlobalContext;
 
