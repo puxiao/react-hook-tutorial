@@ -115,7 +115,6 @@ useContext(context)函数可以传入1个参数，该参数为共享数据对象
 举例：若某React组件一共由3层组件嵌套而成，从外到里分别是AppComponent、MiddleComponent、ChildComponent。AppComponent需要传递数据给ChildComponent。  
 
 若使用useContext来实现，代码示例如下：  
-补充说明：为了简化代码，以下代码中直接将AppComponent、MiddleComponent、ChildComponent 都定义在一个.js文件里。实际项目中可能这3个组件要分别定义在3个.js文件中。
 
     //global-context.js
     import React from 'react';
