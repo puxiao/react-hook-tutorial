@@ -69,7 +69,7 @@ useState(value)函数会返回一个数组，该数组包含2个元素：第1个
 2、'variable'为函数组件中自定义的变量名；  
 3、'setVariable'为修改'variable'对应的函数名；  
 4、'useState'为本次学习的Hook函数；  
-5、'value'为数据默认值
+5、'value'为变量默认值  
 6、'setVariable(newValue)'为调用setVariable并将新的值newValue赋值给variable；  
 
 #### 'variable'补充说明
