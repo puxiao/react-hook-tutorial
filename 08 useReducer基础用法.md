@@ -38,7 +38,7 @@ useReducer(reducer,initialValue)函数通常传入2个参数，第1个参数为�
 
 请注意，当你看到了dispatch，肯定想到了原生JS中的EventEimtter，事实上React Hook帮我们做了底层的事件驱动处理，我们拿到的dispatch以及“事件处理函数”reducer，都时被React Hook 封装过后的，并不是真正的抛出和事件处理函数。  
 
-但是为了更容易让你理解，本文依然会在讲解useReducer对应的修改过程中使用到“事件抛出、事件处理函数”等文字。
+但是为了更容易让你理解，本文依然会在讲解useReducer时使用到“事件抛出、事件处理函数”等文字。
 
 如果你了解事件驱动，使用过EventEimtter，或者你使用过Redux，那么你会很容易理解useReducer的用法。  
  
