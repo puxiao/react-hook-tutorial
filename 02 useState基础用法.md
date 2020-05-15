@@ -41,6 +41,8 @@ name和age只能作为this.state的一个属性。
 
 ## useState函数源码：
 
+首先看一下React源码中的[ReactHooks.js](https://github.com/facebook/react/blob/master/packages/react/src/ReactHooks.js)。
+
     //备注：源码采用TypeScript编写，如果不懂TS代码，阅读起来稍显困难
     export function useState<S>(
       initialState: (() => S) | S,
