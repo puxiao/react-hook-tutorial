@@ -104,14 +104,12 @@ setVariable采用 “异步直接赋值” 的形式，并不会像类组件中�
 ## useState使用示例：  
 
     //函数组件内定义变量name
-    const [name,setName] = useState('nodejs');
-    //name默认值为nodejs
+    const [name,setName] = useState('nodejs'); //name默认值为nodejs
     
     //在函数组件内，某些事件交互处理函数中修改name的值，例如某次鼠标点击的处理函数handleClick
     const handleClick = () => {
       setName('koa');
-      //请注意，setName('koa')修改为异步赋值修改的
-      //如果此时执行console.log(name) 输出的值依然是nodejs
+      //请注意，setName('koa')是异步修改的，如果此时执行console.log(name) 输出的值依然是nodejs
       //请留意下一篇文章 “03 useState高级用法” 中 “解决数据异步” 相关部分
     }
 
