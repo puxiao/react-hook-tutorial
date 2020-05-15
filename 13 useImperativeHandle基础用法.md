@@ -30,7 +30,7 @@ react属于单向数据流，父组件可以通过属性传值，将父组件内
 
 
 ## useImperativeHandle函数源码：  
-回到useImperativeHandle的学习中，首先看一下React源码中的ReactHooks.js。  
+回到useImperativeHandle的学习中，首先看一下React源码中的[ReactHooks.js](https://github.com/facebook/react/blob/master/packages/react/src/ReactHooks.js)。  
 
     //备注：源码采用TypeScript编写，如果不懂TS代码，阅读起来稍显困难
     export function useImperativeHandle<T>(
