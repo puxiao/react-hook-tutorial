@@ -79,7 +79,7 @@
 
 
 ## useRef函数源码：  
-回到useRef的学习中，首先看一下React源码中的ReactHooks.js。  
+回到useRef的学习中，首先看一下React源码中的[ReactHooks.js](https://github.com/facebook/react/blob/master/packages/react/src/ReactHooks.js)。  
 
     //备注：源码采用TypeScript编写，如果不懂TS代码，阅读起来稍显困难
     export function useRef<T>(initialValue: T): {|current: T|} {
