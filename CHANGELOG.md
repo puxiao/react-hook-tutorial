@@ -1,7 +1,10 @@
 # CHANGELOG
 
+## 2020.05.16
+在 “02 useState基础用法.md” 的 “useState函数源码” 中，增加了一些基础的TypeScript泛型知识。  
+
 ## 2020.05.15
-修改 “02 useState基础用法.md” 中 “useState使用示例” 不恰当的示例代码。  
+在 “02 useState基础用法.md” 的 “useState使用示例” 中，修改不恰当的示例代码。  
 感谢网友 '鱼的记忆' 发现此处问题  
 
 ## 2020.05.13
