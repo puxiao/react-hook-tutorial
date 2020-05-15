@@ -69,7 +69,7 @@
 
 代码分析：  
 1、prevData为我们定义的一个形参，指当前count应该的值；  
-2、{return prevData+1} 中，将 prevData+1，并将运算结果return出去；  
+2、{return prevData+1} 中，将 prevData+1，并将运算结果return出去。当然也非常推荐使用更加简化的写法：setCount(prevData => prevData+1)；  
 3、最终将prevData赋值给count；
 
 补充说明：你可以将prevData修改成任意你喜欢的变量名称，比如prev，只需要确保和后面return里的一致即可。  
