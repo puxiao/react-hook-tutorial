@@ -55,7 +55,7 @@ name和age只能作为this.state的一个属性。
 
 ##### 补充一些TypeScript常识：  
 1、react 本身采用TypeScript编写，还是补充点TS常识，方便对各个 hook 源码的理解。  
-2、对于useState以及以后要学习的其他hook函数源码，函数参数中会反复出现<S\>、<T\>、<P\>、<I\>、<I\>，这些大写字母，约定他们对应的单词如下：  
+2、对于useState以及以后要学习的其他hook函数源码，函数参数中会反复出现<S\>、<T\>、<P\>、<I\>、<I\>，这些大写字母，react约定他们对应的单词如下：  
 state -> S -> 约定表示某种“数据”  
 type -> T -> 约定表示某种“类型”  
 props -> P -> 约定表示“属性传值对应的props”  
