@@ -13,7 +13,7 @@
 [https://ahooks.js.org/zh-CN](https://ahooks.js.org/zh-CN)  
 
 #### 网易云音乐前端团队 React Hooks 最佳实践
-实际项目中总结的 React Hooks 实践心得分享  
+实际项目中总结出的 React Hooks 实用经验  
 [https://mp.weixin.qq.com/s/HwlnvAh18saKwXC_nZwSHw](https://mp.weixin.qq.com/s/HwlnvAh18saKwXC_nZwSHw)  
 
 #### React 300问
