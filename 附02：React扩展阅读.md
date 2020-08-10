@@ -8,6 +8,10 @@
 必不可少的 React Hooks集合。  
 [https://github.com/zenghongtu/react-use-chinese](https://github.com/zenghongtu/react-use-chinese)  
 
+#### React技术揭秘
+卡颂写的 React 源码分析。  
+[https://react.iamkasong.com/](https://react.iamkasong.com/)  
+
 #### 阿里 ahooks 工具库
 蚂蚁umi团队、淘系ice团队、阿里体育共同建设的 React Hooks 工具库  
 [https://ahooks.js.org/zh-CN](https://ahooks.js.org/zh-CN)  
@@ -29,4 +33,4 @@ Taro是一套遵循React语法规范的多端开发解决方案。
 [https://taro-docs.jd.com/taro/](https://taro-docs.jd.com/taro/)  
 
 #### 学习React的几个好的微信公众号
-[React中文社区](https://mp.weixin.qq.com/profile?src=3&timestamp=1589269315&ver=1&signature=G073CoQE0hjiRC24RRG*q0M4oxnYl6KFFMgdCd7i2EjKg5oPrHM7VYpz9S-gXlp15V8qXy9m0qFSivpEG1uukg==)、[不知非攻](http://mp.weixin.qq.com/profile?src=3&timestamp=1589269374&ver=1&signature=3NUa*ROY0DyLnKuIQkYT4qPg3aIGXvmvZhV4pbkANWg26zc7DeBh7zrG8ffxAOh2IHy2GBQGwu96gpkJlOfLKQ==)
+[React中文社区](https://mp.weixin.qq.com/profile?src=3&timestamp=1589269315&ver=1&signature=G073CoQE0hjiRC24RRG*q0M4oxnYl6KFFMgdCd7i2EjKg5oPrHM7VYpz9S-gXlp15V8qXy9m0qFSivpEG1uukg==)、[不知非攻](http://mp.weixin.qq.com/profile?src=3&timestamp=1589269374&ver=1&signature=3NUa*ROY0DyLnKuIQkYT4qPg3aIGXvmvZhV4pbkANWg26zc7DeBh7zrG8ffxAOh2IHy2GBQGwu96gpkJlOfLKQ==)、[30秒学前端](http://mp.weixin.qq.com/profile?src=3&timestamp=1597025124&ver=1&signature=hARbgLf5eB*4DaUh2lkJE090ZDxC5O6b83wh0C*eGADeLKTbbsDau6nA*sbfYMtbJq8TzDSYq3O0xhzjrRxVSg==)
