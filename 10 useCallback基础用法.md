@@ -9,6 +9,31 @@
 2、当希望更改某些变量时，可以通过特定的函数来修改该内存中变量的值，例如useState中的setXxxx()  
 2、当某些函数依赖变量发生改变时，react可以重新生成、并修改该内存中对应的函数，例如useReducer、useCallback  
 
+> 此处更新与2020年10月13日
+> 今天学习了一下 JS 原型链：每一个对象或者说由 function 创建的对象，他们都有一个属性 `__proto__`，该属性值为创建该对象的构造函数的原型对象，又称 隐式原型，而这一层的隐式原型也有 `__proto__` 属性，属性值为 Object.prototype，为了避免死循环，最终 Object.prototype 为 null。作为构造函数对象，有属性 prototype，属性值为该函数的显示原型对象。constructor 则表示原型对象的构造函数本身。
+>
+> ```
+> const arr = [1, 2, 3]
+> console.log(arr.__proto__ === Array.prototype) // true
+> console.log(arr.__proto__.__proto__ === Object.prototype) // true
+> console.log(Object.prototype.__proto__ === null) // true
+> 
+> function MyFun() { this.name = 'puxiao' }
+> const myFun = new MyFun()
+> console.log(myFun.__proto__ === MyFun.prototype) // true
+> console.log(MyFun.__proto__ === Function.prototype) // true
+> console.log(myFun.__proto__.__proto__ === Object.prototype) // true
+> console.log(Object.prototype.__proto__) // null
+> ```
+
+> 要想更加容易理解上面代码，就需要明白，所谓 object 是指 { }，而 Object 其实是 JS 内置的对象函数。同理 所谓 array 是指 []，而 Array 其实是 JS 内置的 数组函数
+
+> 正是 JS 中 `__prototype__(隐式原型)` `prototype(显式原型)` `constructor(原型对象所在的构造函数本身)` 这 3个概念，最终组合成了 庞大的 JS 功能。我们平时定义的任何 类、对象、函数 都出在这种 链条 中，以及对 这个链条中某个环节属性功能的扩展，这种组织形式就叫 JS 原型链。
+
+> JS 原型还有一个原则就是可以无限得去扩展自身属性，当前级别的原型扩展属性之后，下层级别的对象自动就拥有该属性。
+>
+> 那么我们可以大概推理出来，React就是巧妙利用了这种 JS 原型链的原则，将底层模块需要用到的处理函数提升到更高(或者说更加原始)的级别中。这样即使底层中发生了变化，但是他依然拥有高层中定义好的函数引用。
+
 请重点留意“修改”这个词，因为“修改”牵扯到react最为隐秘却极其重要的一层概念。  
 “修改”有3种情况：  
 1、用完全不一样的新值去替换之前的旧值 ——> 这会触发react重新渲染 ——> 例如{age:34}去替换{age:18}  
