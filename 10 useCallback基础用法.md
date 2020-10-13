@@ -10,7 +10,7 @@
 2、当某些函数依赖变量发生改变时，react可以重新生成、并修改该内存中对应的函数，例如useReducer、useCallback  
 
 > 此处更新与2020年10月13日  
-> 今天学习了一下 JS 原型链：每一个对象或者说由 function 创建的对象，他们都有一个属性 `__proto__`，该属性值为创建该对象的构造函数的原型对象，又称 隐式原型，而这一层的隐式原型也有 `__proto__` 属性，属性值为 Object.prototype，为了避免死循环，最终 Object.prototype 为 null。作为构造函数对象，有属性 prototype，属性值为该函数的显示原型对象。constructor 则表示原型对象的构造函数本身。
+> 今天学习了一下 JS 原型链：每一个对象或者说由 function 创建的对象，他们都有一个属性 `__proto__`，该属性值为创建该对象的构造函数的原型对象，又称 隐式原型，而这一层的隐式原型也有 `__proto__` 属性，即 `__proto__.proto__` 属性值为 Object.prototype，还可以继续再往下深入 `__proto__.__proto__.__proto__`为了避免死循环，最终到此，即 Object.prototype.__proto__ 为 null。作为构造函数对象，有属性 prototype，属性值为该函数的显示原型对象。constructor 则表示原型对象的构造函数本身。
 >
 > ```
 > const arr = [1, 2, 3]
