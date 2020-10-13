@@ -23,6 +23,7 @@
 > console.log(myFun.__proto__ === MyFun.prototype) // true
 > console.log(MyFun.__proto__ === Function.prototype) // true
 > console.log(myFun.__proto__.__proto__ === Object.prototype) // true
+> console.log(myFun.__proto__.__proto__.__proto__) // true
 > console.log(Object.prototype.__proto__) // null
 > ```
 
