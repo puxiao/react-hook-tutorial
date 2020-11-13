@@ -76,6 +76,7 @@
 [15 useDebugValue基础用法](https://github.com/puxiao/react-hook-tutorial/blob/master/15%20useDebugValue%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
 [16 自定义hook](https://github.com/puxiao/react-hook-tutorial/blob/master/16%20%E8%87%AA%E5%AE%9A%E4%B9%89hook.md)  
 [17 React Hook 总结](https://github.com/puxiao/react-hook-tutorial/blob/master/17%20React%20Hook%20%E6%80%BB%E7%BB%93.md)  
+[18 示例：React使用Echarts所用到的hooks](https://github.com/puxiao/react-hook-tutorial/blob/master/18%20%E7%A4%BA%E4%BE%8B%EF%BC%9AReact%E4%BD%BF%E7%94%A8Echarts%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84hooks.md)  
 [附01：React基础知识](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8401%EF%BC%9AReact%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)  
 [附02：React扩展阅读](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8402%EF%BC%9AReact%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.md)  
 
