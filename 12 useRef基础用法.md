@@ -288,7 +288,7 @@ timerRef.current = setInterval(() => {
 
 1. TypeScript 是运行在 Nodejs 环境下的，TS 编译之后的代码是运行在浏览器环境下的。
 2. Nodejs 和浏览器中的window 他们各自实现了一套自己的 setInterval 
-3. 原来代码 timerRef.current = setInterval( ... ) 中 setInterval 是 Nodejs 定义的 setInterval，而  Nodejs 中 setInterval 返回的类型就是 NodeJS.Timeout。
+3. 原来代码 timerRef.current = setInterval( ... ) 中 setInterval 会被 TS 认为是 Nodejs 定义的 setInterval，而  Nodejs 中 setInterval 返回的类型就是 NodeJS.Timeout。
 4. 所以，我们需要将上述代码修改为：timerRef.current = window.setInterval( ... )，明确我们调用的是 window.setInterval，而不是 Nodejs 的 setInterval。
 
 
