@@ -1,12 +1,14 @@
 # 12 useRef基础用法
 
 ## useRef概念解释
+
 我们第七个要学习的Hook(钩子函数)是useRef，他的作用是“勾住”某些组件挂载完成或重新渲染完成后才拥有的某些对象，并返回该对象的引用。该引用在组件整个生命周期中都固定不变，该引用并不会随着组件重新渲染而失效。
 
 上面这段话，就算你认真读几遍，估计也是一头雾水，到底说的是啥？  
 我也实在想不出其他更加通俗的语言来描述useRef，不过经过下面的详细分解描述，相信能帮到你来理解useRef。  
 
 ##### “某些组件挂载完成或重新渲染完成后才拥有的某些对象”：  
+
 这句话中的“某些对象”主要分为3种：JSX组件转换后对应的真实DOM对象、在useEffect中创建的变量、子组件内自定义的函数(方法)。
 
 **第1：JSX组件转换后对应的真实DOM对象**：  
@@ -49,10 +51,12 @@
 
 
 ##### “并返回该对象的引用”：  
+
 上面的前2种情况，都提到用useRef来获取对象的引用。具体如何获取，稍后在useRef用法中会有演示。  
 
 
 ##### “该引用在组件整个生命周期中都固定不变”：
+
 假设通过useRef获得了该对象的引用，那么当react组件重新渲染后，如何保证该引用不丢失？  
 答：react在底层帮我们做了这个工作，我们只需要相信之前的引用可以继续找到目标对象即可。
 
@@ -62,6 +66,7 @@
 
 
 ## useRef是来解决什么问题的？
+
 答：useRef可以“获取某些组件挂载完成或重新渲染完成后才拥有的某些对象”的引用，且保证该引用在组件整个生命周期内固定不变，都能准确找到我们要找的对象。  
 具体已经在useRef中做了详细阐述，这里不再重复。    
 
@@ -79,6 +84,7 @@
 
 
 ## useRef函数源码：  
+
 回到useRef的学习中，首先看一下React源码中的[ReactHooks.js](https://github.com/facebook/react/blob/master/packages/react/src/ReactHooks.js)。  
 
     //备注：源码采用TypeScript编写，如果不懂TS代码，阅读起来稍显困难
@@ -101,16 +107,16 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 接下来具体说说useRef关联对象的2种用法：  
 1、针对 JSX组件，通过属性 ref={xxxRef} 进行关联。  
 2、针对 useEffect中的变量，通过 xxxRef.current 进行关联。  
- 
+
 
 ##### 代码形式：  
 
     //先定义一个xxRef引用变量，用于“勾住”某些组件挂载完成或重新渲染完成后才拥有的某些对象
     const xxRef = useRef(null);
-
+    
     //针对 JSX组件，通过属性 ref={xxxRef} 进行关联
     <xxx ref={xxRef} />
-
+    
     //针对 useEffect中的变量，通过 xxxRef.current 进行关联
     useEffect(() => {
        xxRef.current = xxxxxx;
@@ -118,16 +124,20 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 
 
 ##### 拆解说明：  
+
 1、具体讲解已在上面示例代码中做了多项注释，此处不再重复；  
 
 #### 'ref'补充说明
+
 1、组件的 ref 为特殊属性名，他并不存在组件属性传值的 props 中。  
 2、如果给一个组件设定了 ref 属性名，但是对应的值却不是由 useRef 创建的，那么实际运行中会收到react的报错，无法正常渲染。  
 
 #### '<xxx\>'补充说明
+
 1、useRef只能针对react中小写开头的类似原生标签的组件，所以这里用的是 <xxx\> 而不是 <Xxx\>。  
 
 #### 'xxxRef.current'补充说明
+
 1、当需要使用“勾住”的对象时，也是通过xxRef.current来获取该对象的。
 
 
@@ -142,16 +152,16 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 完整代码如下：  
 
     import React,{useEffect,useRef} from 'react'
-
+    
     function Component() {
       //先定义一个inputRef引用变量，用于“勾住”挂载网页后的输入框
       const inputRef = useRef(null);
-
+    
       useEffect(() => {
         //inputRef.current就是挂载到网页后的那个输入框，一个真实DOM，因此可以调用html中的方法focus()
         inputRef.current.focus();
       },[]);
-
+    
       return <div>
           {/* 通过 ref 属性将 inputRef与该输入框进行“挂钩” */}
           <input type='text' ref={inputRef} />
@@ -183,7 +193,7 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 代码如下：  
 
     import React,{useState,useEffect} from 'react'
-
+    
     function Component() {
       const [count,setCount] = useState(0);
       const [timer,setTimer] = useState(null); //单独声明定义timer，目的是为了让组件内所有地方都可以访问到timer
@@ -198,12 +208,12 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
           clearInterval(timer);
         }
       },[]);
-
+    
       const clickHandler = () => {
         //清除掉timer
         clearInterval(timer);
       };
-
+    
       return (
         <div>
             {count}
@@ -211,7 +221,7 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
         </div>
       )
     }
-
+    
     export default Component
 
 
@@ -219,11 +229,11 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 代码如下：  
 
     import React,{useState,useEffect,useRef} from 'react'
-
+    
     function Component() {
       const [count,setCount] =  useState(0);
       const timerRef = useRef(null);//先定义一个timerRef引用变量，用于“勾住”useEffect中通过setIntervale创建的计时器
-
+    
       useEffect(() => {
         //将timerRef.current与setIntervale创建的计时器进行“挂钩”
         timerRef.current = setInterval(() => {
@@ -234,12 +244,12 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
             clearInterval(timerRef.current);
         }
       },[]);
-
+    
       const clickHandler = () => {
         //通过timerRef.current，清除掉计时器
         clearInterval(timerRef.current);
       };
-
+    
       return (
         <div>
             {count}
@@ -247,10 +257,77 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
         </div>
       )
     }
-
+    
     export default Component
 
+
+
+___
+
+> 以下内容更新于2020.11.18
+
+#### 在 TypeScript 中使用 useRef 创建计时器注意事项：
+
+在上面代码示例中，请注意这一行代码：
+
+```
+timerRef.current = setInterval(() => {
+        setCount((prevData) => { return prevData +1});
+    }, 1000);
+```
+
+如果是在 TS 语法下，上面的代码会报错误：
+
+```
+不能将类型“Timeout”分配给类型“number”。
+```
+
+**Timeout ???**
+
+造成这个错误提示的原因是：
+
+1. TypeScript 是运行在 Nodejs 环境下的，TS 编译之后的代码是运行在浏览器环境下的。
+2. Nodejs 和浏览器中的window 他们各自实现了一套自己的 setInterval 
+3. 原来代码 timerRef.current = setInterval( ... ) 中 setInterval 是 Nodejs 定义的 setInterval，而  Nodejs 中 setInterval 返回的类型就是 NodeJS.Timeout。
+4. 所以，我们需要将上述代码修改为：timerRef.current = window.setInterval( ... )，明确我们调用的是 window.setInterval，而不是 Nodejs 的 setInterval。
+
+
+
+**附一个 TS 代码示例：**
+
+```
+import React, { useRef, useEffect } from 'react'
+
+const MyTemp = () => {
+    const timer = useRef<number | undefined>()
+
+    useEffect(() => {
+        timer.current = window.setInterval(() => {
+            console.log(0)
+        }, 1000)
+
+        return () => {
+            clearInterval(timer.current)
+        }
+    }, [])
+    return (
+        <div></div>
+    )
+}
+
+export default MyTemp
+```
+
+
+
+> 以上内容更新于2020.11.18
+
+____
+
+
+
 两种实现方式对比：  
+
 1、两种实现方式最主要的差异地方在于 如何创建组件内对计时器的引用。  
 2、两种创建引用的方式，分别是：用useState创建的timer、用useRef创建的timerRef  
 3、在使用setInterval时，相对来说timerRef.current更加好用简单，结构清晰，不需要像 setTimer那样需要再多1层包裹。  
@@ -264,6 +341,7 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 第3遍强调：useRef只适合“勾住”小写开头的类似原生标签的组件。如果是自定义的react组件(自定义的组件必须大写字母开头)，那么是无法使用useRef的。 
 
 ## 那如何“勾住”自定义组件中的“小写开头的类似原生标签的组件”？  
+
 答：使用React.forwardRef()。  
 
 ##### 你是否思考过这个问题：自定义组件到底是什么？  
@@ -307,15 +385,15 @@ React.forwardRef()包裹住要输出的组件，且将第2个参数设置为 ref
 
 
     import React from 'react'
-
+    
     const ChildComponent = React.forwardRef((props,ref) => {
       //子组件通过将第2个参数ref 添加到内部真正的“小写开头的类似原生标签的组件”中 
       return <button ref={ref}>{props.label}</button>
     });
-
+    
     /* 上面的子组件直接在父组件内定义了，如果子组件是单独的.js文件，则可以通过
        export default React.forwardRef(ChildComponent) 这种形式  */
-
+    
     function Forward() {
       const ref = React.useRef();//父组件定义一个ref
       const clickHandle = () =>{
