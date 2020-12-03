@@ -169,10 +169,11 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
     }
     export default Component
 
-
 注意：  
 1、在给组件设置 ref 属性时，只需传入 inputRef，千万不要传入 inputRef.current。  
 2、在“勾住”渲染后的真实DOM输入框后，能且只能调用原生html中该标签拥有的方法。  
+
+
 
 
 ## useRef使用示例2：  
@@ -262,7 +263,9 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 
 
 
-___
+---
+
+
 
 > 以下内容更新于2020.11.18
 
@@ -318,11 +321,77 @@ const MyTemp = () => {
 export default MyTemp
 ```
 
-
-
 > 以上内容更新于2020.11.18
 
 ____
+
+
+
+> 以下内容更新于2020.12.03
+
+#### 在 TypeScript 中给 useRef.current 赋值的注意事项
+
+在 jsx 文件中，以下代码是不会有问题的。
+
+```
+const myRef = useRef(null)
+...
+myRef.current = xxxx
+```
+
+但是，在我们使用 TypeScript 之后，按照习惯改成以下代码：
+
+```
+const myRef = useRef<Xxx>(null)
+...
+myRef.current = xxx
+```
+
+此时，会收到 TypeScript 的报错：**无法分配到 "current" ，因为 inputRef.current 是只读属性。**
+
+
+
+**报错原因：**
+
+React 的作者并没有规定使用 useRef(null) 之后 myRef.current 就不可以再修改了。
+
+但是 TypeScript 的作者认为，若使用 useRef(null) 之后，myRef 就应该交由 React 来托管，外界不应该有权利去修改 myRef.current，因此此时会把 myRef.current 当做只读属性。
+
+
+
+**解决方式：**
+
+其实解决方式非常简单，就是将原本的类型定义，修改成以下：
+
+```
+const myRef = useRef<Xxx | null>(null)
+
+//或者是
+
+const myRef = useRef<Xxx | undefined>()
+```
+
+myRef.current 的数据类型，除了 Xxx 之外，再加上 null 或 undefined ，这样 TypeScript 就认为  myRef.current 可能中途会发生修改，因此不会再将其设置为只读属性，此时再去执行 `myRef.current = xxx` 不再会报错。
+
+
+
+**验证一下：**
+
+我们再去看看上面 2020.11.18 更新的 TypeScript 代码示例中：
+
+由于将来需要执行 timer.current =  window.setInterval ( ... )，也就是说需要给 timer.current 赋值。
+
+所以在定义时就使用以下方式，以确保 timer.current 不会被 TS 认为是只读属性：
+
+```
+const timer = useRef<number | undefined>()
+```
+
+
+
+> 以上内容更新于2020.12.03
+
+---
 
 
 
