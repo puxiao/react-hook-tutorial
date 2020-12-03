@@ -347,7 +347,7 @@ const myRef = useRef<Xxx>(null)
 myRef.current = xxx
 ```
 
-此时，会收到 TypeScript 的报错：**无法分配到 "current" ，因为 inputRef.current 是只读属性。**
+此时，会收到 TypeScript 的报错：**无法分配到 "current" ，因为 myRef.current 是只读属性。**
 
 
 
