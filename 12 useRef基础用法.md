@@ -263,6 +263,22 @@ useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住�
 
 
 
+**两种实现方式对比：**  
+
+1、两种实现方式最主要的差异地方在于 如何创建组件内对计时器的引用。  
+2、两种创建引用的方式，分别是：用useState创建的timer、用useRef创建的timerRef  
+3、在使用setInterval时，相对来说timerRef.current更加好用简单，结构清晰，不需要像 setTimer那样需要再多1层包裹。  
+4、timer更像是一种react对计时器的映射，而timerRef直接就是真实DOM中计时器的引用，timerRef能够调用更多的原生html中的JS方法和属性。  
+
+
+**结论：**  
+1、如果需要对渲染后的DOM节点进行操作，必须使用useRef。  
+2、如果需要对渲染后才会存在的变量对象进行某些操作，建议使用useRef。  
+
+第3遍强调：useRef只适合“勾住”小写开头的类似原生标签的组件。如果是自定义的react组件(自定义的组件必须大写字母开头)，那么是无法使用useRef的。 
+
+
+
 ---
 
 
@@ -394,20 +410,6 @@ const timer = useRef<number | undefined>()
 ---
 
 
-
-两种实现方式对比：  
-
-1、两种实现方式最主要的差异地方在于 如何创建组件内对计时器的引用。  
-2、两种创建引用的方式，分别是：用useState创建的timer、用useRef创建的timerRef  
-3、在使用setInterval时，相对来说timerRef.current更加好用简单，结构清晰，不需要像 setTimer那样需要再多1层包裹。  
-4、timer更像是一种react对计时器的映射，而timerRef直接就是真实DOM中计时器的引用，timerRef能够调用更多的原生html中的JS方法和属性。  
-
-
-结论：  
-1、如果需要对渲染后的DOM节点进行操作，必须使用useRef。  
-2、如果需要对渲染后才会存在的变量对象进行某些操作，建议使用useRef。  
-
-第3遍强调：useRef只适合“勾住”小写开头的类似原生标签的组件。如果是自定义的react组件(自定义的组件必须大写字母开头)，那么是无法使用useRef的。 
 
 ## 那如何“勾住”自定义组件中的“小写开头的类似原生标签的组件”？  
 
