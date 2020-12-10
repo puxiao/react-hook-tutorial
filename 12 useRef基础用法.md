@@ -100,7 +100,38 @@
 
 useRef(initialValue)函数只有1个可选参数，该参数为默认“勾住”的对象。绝大多数实际的情况是，默认“勾住”的对象在JSX未编译前(组件挂载或重新渲染后)根本不存在，所以更多时候都会传一个 null 作为默认值。如果不传任何参数，那么react默认将参数设置为undefined。  
 
-就目前本人所理解的，useRef(null)和useRef() 实际上是没有什么区别的。  
+就目前本人所理解的，日常使用过程中useRef(null)和useRef() 实际上是没有什么区别的。  
+
+---
+
+以下更新于 2020.12.10
+
+
+
+**补充一下 React + TypeScript 知识点：**
+
+useRef(null) 和 useRef() 在 React + TypeScript 项目中还是有差别的。
+
+假设我们要勾住一个 <canvas /\> DOM元素，那么：
+
+```
+const canvasRef1 = useRef<HTMLCanvasElement>(null)
+const canvasRef2 = useRef<HTMLCanvasElement>()
+```
+
+上面代码中：
+
+1. canvasRef1.current 的类型为：HTMLCanvasElement | null
+2. canvasRef2.current 的类型为：HTMLCanvasElement | null | undefined
+
+
+
+以上更新于 2020.12.10
+
+---
+
+
+
 
 第2遍强调：本文提到的组件，默认都是指小写开头的类似原生标签的组件，不可以是自定义组件。  
 
