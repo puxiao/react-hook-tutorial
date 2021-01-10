@@ -110,6 +110,8 @@ Hooks解决方式：
 
 下面讲解一下 React 的生命周期函数，面对如此复杂的生命周期函数，是没有必要过于了解和研究的，目前来说，一般只需学习使用 useEffect 这个 hook 即可。
 
+useEffect 这个 hook 会在稍后讲解。
+
 ## React生命周期函数
 
 React 一次状态更新，一共分为 2 个阶段、4 个生命周期。
@@ -155,8 +157,6 @@ componentWillReceiveProps、componentWillMount、componentWillUpdate 这 3 个�
 **目前并不是所有的生命周期函数都对应有 hook 函数。**
 
 再次重复一遍，这些生命周期函数你只需大致了解，初学者只需学会 useEffect 这个 hook 即可。
-
-useEffect 这个 hook 会在稍后讲解。
 
 
 
