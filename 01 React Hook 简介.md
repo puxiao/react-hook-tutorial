@@ -105,6 +105,63 @@ Hooks解决方式：
 ##### 你只需记住一个结论：忘掉类组件，使用Hook进行函数组件开发，将是一个明智选择。  
 
 
+> 以下内容更新于 2021.01.10
+
+下面讲解一下 React 的生命周期函数，面对如此复杂的生命周期函数，是没有必要过于了解和研究的，目前来说，一般只需学习使用 useEffect 这个 hook 即可。
+
+## React生命周期函数
+
+React 一次状态更新，一共分为 2 个阶段、4 个生命周期。
+
+**2 个阶段：**
+
+1. render阶段：包含Diff算法，计算出状态变化
+2. commit渲染阶段：ReactDom渲染器，将状态变化渲染在视图中
+
+**4个生命周期：**
+
+1. Mout(第一次挂载)
+2. Update(更新)
+3. Unmout(卸载)
+4. Error(子项发生错误)
+
+
+
+| 生命周期函数              | 所属阶段   | 所属生命周期        |
+| ------------------------- | ---------- | ------------------- |
+| constructor               | Render阶段 | Mount               |
+| componentWillReceiveProps | Render阶段 | Update              |
+| getDerivedStateFromProps  | Render阶段 | 并存于Moun、Update  |
+| getDerivedStateFromError  | Render阶段 | Error               |
+| shouldComponentUpdate     | Render阶段 | Update              |
+| componentWillMount        | Render阶段 | Mount               |
+| componentWillUpdate       | Render阶段 | Update              |
+| render                    | Render阶段 | 并存于Mount、Update |
+| componentDidMount         | Commit阶段 | Mount               |
+| getSnapshotBeforeUpdate   | Commit阶段 | Update              |
+| componentDidUpdate        | Commit阶段 | Update              |
+| componentWillUnmount      | Commit阶段 | Unmount             |
+| componentDidCatch         | Commit阶段 | Error               |
+
+**注意事情：**
+
+componentWillReceiveProps、componentWillMount、componentWillUpdate 这 3 个生命周期函数正在逐步被 React 官方放弃使用，不推荐继续使用这 3 个生命周期函数。
+
+与之对应的是 getDerivedStateFromProps、getDerivedStateFromError 这 2 个这是被推荐使用的。
+
+**补充说明：**
+
+**目前并不是所有的生命周期函数都对应有 hook 函数。**
+
+再次重复一遍，这些生命周期函数你只需大致了解，初学者只需学会 useEffect 这个 hook 即可。
+
+useEffect 这个 hook 会在稍后讲解。
+
+
+
+> 以上内容更新于 2021.01.10
+
+
 ## 本节小结
 
 1、Hook是React 16.8及以上版本才拥有的特性。  
