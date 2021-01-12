@@ -408,7 +408,13 @@ React 的作者并没有规定使用 useRef(null) 之后 myRef.current 就不可
 
 **解决方式：**
 
-其实解决方式非常简单，就是将原本的类型定义，修改成以下：
+解决方式1：不给 useRef 设置 null 这个默认值
+
+```
+const myRef = useRef<Xxx>()
+```
+
+解决方式2：就是将原本的类型定义，修改成以下：
 
 ```
 const myRef = useRef<Xxx | null>(null)
