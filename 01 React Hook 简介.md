@@ -152,6 +152,10 @@ componentWillReceiveProps、componentWillMount、componentWillUpdate 这 3 个�
 
 与之对应的是 getDerivedStateFromProps、getDerivedStateFromError 这 2 个这是被推荐使用的。
 
+关于各个生命周期函数详细介绍，可以参考 React 官方文档：
+https://zh-hans.reactjs.org/docs/react-component.html#commonly-used-lifecycle-methods
+
+
 **补充说明：**
 
 **目前并不是所有的生命周期函数都对应有 hook 函数。**
