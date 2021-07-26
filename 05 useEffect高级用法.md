@@ -107,7 +107,7 @@ setA(a => ...)  这是在 “03 useState高级用法”中，解决数据异步 
       return <div>
         {JSON.stringify(obj)}
         <button onClick={() => {setObj({...obj,a:obj.a+1})}}>a+1</button> 
-        <button onClick={() => {setObj({...obj,b:obj.b+1})}}>a+1</button>
+        <button onClick={() => {setObj({...obj,b:obj.b+1})}}>b+1</button>
       </div>
     }
     export default Component;
