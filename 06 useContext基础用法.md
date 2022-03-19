@@ -8,7 +8,7 @@
 
 数据层层传递增加了组件的复杂性，降低了可复用性。为了解决这个问题，我们可以使用以下方式：  
 1、在组件顶层或单独的模块中，由React.createContext()创建一个共享数据对象；  
-2、在父组件中添加共享数据对象的引用，通过且只能通过<XxxContext.provider value={{xx:'xxx'}}></XxxContext.provider>的形式将数据传递给子组件。请注意传值必须使用value={obj}这种形式；  
+2、在父组件中添加共享数据对象的引用，通过且只能通过<XxxContext.provider value={{xx:'xxx'}}></XxxContext.provider>的形式将数据传递给子组件。请注意传值必须使用value={obj}这种形式，若值本身为字符串则可以改为 value='xxx'；  
 3、若下一层的子组件用不到共享数据对象中的数据，则可以不做任何属性标签传递；  
 4、若某一层的子组件需要用到共享数据对象的数据，则可通过<XxxContext.Consumer></XxxContext.Consumer>获取到数据；  
 5、在类组件中除了<XxxContext.Consumer>标签，还有另外一种获取共享数据方式：static xxx = XxxContext; 但是这种形式在函数组件中无法使用。  
