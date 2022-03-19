@@ -215,7 +215,7 @@
 
 通过 setXxx 设置新值，但是如果新值和当前值完全一样，那么会引发React重新渲染吗？
 
-通过React官方文档可以知道，当使用 setXxx 赋值时，Hook会使用Object.is()来对比当前值和新值，结果为true则不渲染，结果为flash就会重新渲染。
+通过React官方文档可以知道，当使用 setXxx 赋值时，Hook会使用Object.is()来对比当前值和新值，结果为true则不渲染，结果为false就会重新渲染。
 
     let str='a';
     Object.is(str,'a'); //true
