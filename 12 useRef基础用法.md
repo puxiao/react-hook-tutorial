@@ -101,7 +101,7 @@
 例如下面这个示例：
 
 ```
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function MyButton() {
   const countRef = useRef(0)
