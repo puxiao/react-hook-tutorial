@@ -78,9 +78,55 @@
 2者都想可以“勾住”，只能使用useRef。    
 
 
-## 注意注意！
+## 注意注意
 
 在后面useImperativeHandle的学习中，你会知道useRef还可以 “勾住并调用” 子组件内定义的函数(方法)。 
+
+
+
+<br>
+
+> 以下内容更新于 2022.04.06
+
+## 特别注意：修改 .current 的值并不会触发组件重新渲染
+
+在本文开头介绍 useRef  时用了这句话 “useRef 是“勾住”某些组件挂载完成或重新渲染完成后才拥有的某些对象，并返回该对象的引用。”
+
+也就是说 **先有了 组件渲染，之后才更新了 useRef 中 .current 的值。**
+
+> 也就是说 useRef 变量的 current 的值实际上是 组件渲染 后的一个副产品。
+
+**这句话暗含了另外一层含义：主动更新 useRef 变量的 .current 的值并不会触发组件重新渲染。**
+
+例如下面这个示例：
+
+```
+import { useRef, useState } from "react";
+
+export default function MyButton() {
+  const countRef = useRef(0)
+
+  const handleClick = () => {
+    countRef.current = countRef.current + 1
+  };
+
+  return <button onClick={handleClick}>Click me {countRef.current}</button>;
+}
+```
+
+实际运行就会发现，在点击事件中我们修改了 countRef.current 的值，尽管该值确实发生了变化，可是并不会触发组件的重新渲染。
+
+> 使用 useState() 产生的变量值发生变化后，是会触发组件重新渲染的。
+
+
+
+<br>
+
+> 以上内容更新于 2022.04.06
+
+
+
+<br>
 
 
 ## useRef函数源码：  
