@@ -356,6 +356,107 @@ const canvasRef2 = useRef<HTMLCanvasElement>()
 
 
 
+<br>
+
+> 以下内容更新于 2022.05.20
+
+## useRef使用示例3：父组件调用子组件中的函数
+
+**首先特别强调：除非情况非常特殊，否则一般情况下都不要采用 父组件调用子组件的函数 这种策略。**
+
+
+
+<br>
+
+**使用 useRef 实现父组件调用子组件中的函数 实现思路：**
+
+1. 父组件中通过 useRef 定义一个钩子变量，例如 childFunRef
+
+2. 父组件通过参数配置，将 childFunRef 传递给子组件
+
+3. 子组件在自己的 useEffect() 中定义一个函数，例如 doSomting()
+
+   > 划重点：一定要在 useEffect() 中定义 doSomting()，不能直接在子组件内部定义。
+   >
+   > 因为如果 doSomting() 定义在子组件内部，那么就会造成每一次组件刷新都会重新生成一份 doSomthing()
+
+4. 然后将 doSomting() 赋值到 childFunRef.current 中
+
+5. 这样，当父组件想调用子组件中的 doSomting() 时，可执行 childFunRef.current.doSomting()
+
+
+
+<br>
+
+具体示例代码：
+
+**ParentComponent**
+
+```
+import { useRef } from "react";
+import ChildComponent from "./child";
+
+const ParentComponent = () => {
+  const childFunRef = useRef();
+  const handleOnClick = () => {
+    if (childFunRef.current) {
+      childFunRef.current.doSomething();
+    }
+  };
+  return (
+    <div>
+      <ChildComponent funRef={childFunRef} />
+      <button onClick={handleOnClick}>执行子项的doSomething()</button>
+    </div>
+  );
+};
+
+export default ParentComponent;
+```
+
+
+
+<br>
+
+**ChildComponent**
+
+```
+import { useEffect, useState } from "react";
+
+const ChildComponent = ({ funRef }) => {
+  const [num, setNum] = useState(0);
+  useEffect(() => {
+    const doSomething = () => {
+      setNum(Math.floor(Math.random() * 100));
+    };
+    funRef.current = { doSomething }; //在子组件中修改父组件中定义的childFunRef的值
+  }, [funRef]);
+  return <div>{num}</div>;
+};
+
+export default ChildComponent;
+```
+
+
+
+<br>
+
+**特别说明：**
+
+1. 下一章要讲解的 [useImperativeHandle](https://github.com/puxiao/react-hook-tutorial/blob/master/13 useImperativeHandle基础用法.md) 也是用来实现 父组件调用子组件内定义的函数的。
+
+2. 再次强调，如非必要，真的不要使用 父组件调用子组件内函数 这种策略。
+
+   > 最近我遇到了一个需求，子组件是一个第三方写好的轮播图，父组件需要调用这个轮播图的 next() 的函数来切换下一张，所以才使用了这种策略。
+
+
+
+> 以上内容更新于 2022.05.20
+
+
+
+<br>
+
 ---
 
 
