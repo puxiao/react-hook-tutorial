@@ -443,7 +443,7 @@ export default ChildComponent;
 
 **特别说明：**
 
-1. 下一章要讲解的 [useImperativeHandle](https://github.com/puxiao/react-hook-tutorial/blob/master/13 useImperativeHandle基础用法.md) 也是用来实现 父组件调用子组件内定义的函数的。
+1. 下一章要讲解的 useImperativeHandle 也是用来实现 父组件调用子组件内定义的函数的。
 
 2. 再次强调，如非必要，真的不要使用 父组件调用子组件内函数 这种策略。
 
