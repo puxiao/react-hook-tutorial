@@ -31,7 +31,7 @@
 
 ## useContext函数源码：  
 回到useContext的学习中，首先看一下React源码中的[ReactHooks.js](https://github.com/facebook/react/blob/master/packages/react/src/ReactHooks.js)。  
-
+```ts
     //备注：源码采用TypeScript编写，如果不懂TS代码，阅读起来稍显困难
     export function useContext<T>(
       Context: ReactContext<T>,
@@ -72,7 +72,7 @@
     }
       return dispatcher.useContext(Context, unstable_observedBits);
     }
-
+```
 上述代码看不懂没关系，本系列教程只是讲述“如何使用Hook”，并不是“Hook源码分析”。之所以贴出源码只是想让你看懂以后告诉我，反正我是没看懂。^_^  
 
 
@@ -82,18 +82,18 @@ useContext(context)函数可以传入1个参数，该参数为共享数据对象
  
 
 ##### 代码形式：  
+```jsx
+import GlobalContext from './global-context'; //引入共享数据对象
 
-    import GlobalContext from './global-context'; //引入共享数据对象
-    
-    function Component(){
-      const global = useContext(GlobalContext); //在函数组件中声明一个变量来代表该共享数据对象的value值
+function Component(){
+  const global = useContext(GlobalContext); //在函数组件中声明一个变量来代表该共享数据对象的value值
 
-      //若想获取共享数据对象中的属性xxx的值，直接使用global.xxx即可
-      return <div>
-        {global.xxx}
-      </div>
-    }
-
+  //若想获取共享数据对象中的属性xxx的值，直接使用global.xxx即可
+  return <div>
+    {global.xxx}
+  </div>
+}
+```
 
 ##### 拆解说明：  
 
@@ -115,59 +115,59 @@ useContext(context)函数可以传入1个参数，该参数为共享数据对象
 举例：若某React组件一共由3层组件嵌套而成，从外到里分别是AppComponent、MiddleComponent、ChildComponent。AppComponent需要传递数据给ChildComponent。  
 
 若使用useContext来实现，代码示例如下：  
+```jsx
+//global-context.js
+import React from 'react';
+const GlobalContext = React.createContext(); //请注意，这里还可以给React.createContext()传入一个默认值
+//例如：const GlobalContext = React.createContext({name:'Yang',age:18})
+//假如<GlobalContext.Provider>中没有设置value的值，就会使用上面定义的默认值
+export default GlobalContext;
 
-    //global-context.js
-    import React from 'react';
-    const GlobalContext = React.createContext(); //请注意，这里还可以给React.createContext()传入一个默认值
-    //例如：const GlobalContext = React.createContext({name:'Yang',age:18})
-    //假如<GlobalContext.Provider>中没有设置value的值，就会使用上面定义的默认值
-    export default GlobalContext;
+...
 
-    ...
+//component.js
+import React, { useContext } from 'react';
+import GlobalContext from './global-context';
 
-    //component.js
-    import React, { useContext } from 'react';
-    import GlobalContext from './global-context';
+function AppComponent() {
+  //标签<GlobalContext.Provider>中向下传递数据，必须使用value这个属性，且数据必须是键值对类型的object
+  //如果不添加value，那么子组件获取到的共享数据value值是React.createContext(defaultValues)中的默认值defaultValues
+  return <div>
+    <GlobalContext.Provider value={{name:'puxiao',age:34}}>
+        <MiddleComponent />
+    </GlobalContext.Provider>
+  </div>
+}
 
-    function AppComponent() {
-      //标签<GlobalContext.Provider>中向下传递数据，必须使用value这个属性，且数据必须是键值对类型的object
-      //如果不添加value，那么子组件获取到的共享数据value值是React.createContext(defaultValues)中的默认值defaultValues
-      return <div>
-        <GlobalContext.Provider value={{name:'puxiao',age:34}}>
-            <MiddleComponent />
-        </GlobalContext.Provider>
-      </div>
-    }
+function MiddleComponent(){
+  //MiddleComponent 不需要做任何 “属性数据传递接力”，因此降低该组件数据传递复杂性，提高组件可复用性
+  return <div>
+    <ChildComponent />
+  </div>
+}
 
-    function MiddleComponent(){
-      //MiddleComponent 不需要做任何 “属性数据传递接力”，因此降低该组件数据传递复杂性，提高组件可复用性
-      return <div>
-        <ChildComponent />
-      </div>
-    }
+function ChildComponent(){
+  const global = useContext(GlobalContext); //获取共享数据对象的value值
+  //忘掉<GlobalContext.Consumer>标签，直接用global获取需要的值
+  return <div>
+    {global.name} - {global.age}
+  </div>
+}
 
-    function ChildComponent(){
-      const global = useContext(GlobalContext); //获取共享数据对象的value值
-      //忘掉<GlobalContext.Consumer>标签，直接用global获取需要的值
-      return <div>
-        {global.name} - {global.age}
-      </div>
-    }
-
-    export default AppComponent;
-
+export default AppComponent;
+```
 假如ChildComponent不使用useContext，而是使用<GlobalContext.Consumer>标签，那么代码相应修改为：  
-
-    function ChildComponent(){
-      return <GlobalContext.Consumer>
-        {
-            global => {
-                return <div>{global.name} - {global.age}</div>
-            }
+```jsx
+function ChildComponent(){
+  return <GlobalContext.Consumer>
+    {
+        global => {
+            return <div>{global.name} - {global.age}</div>
         }
-      </GlobalContext.Consumer>
     }
-
+  </GlobalContext.Consumer>
+}
+```
 使用useContext可以大大降低获取数据代码复杂性。  
 
 请注意：useContext只是简化了获取共享数据value的代码，但是对于<XxxContext.Provider>的使用没有做任何改变，如果组件需要设置2个XxxContext，那么依然需要进行<XxxContext.Provider>嵌套。  
