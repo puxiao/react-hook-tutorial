@@ -100,7 +100,7 @@
 **特别感谢：**
 
 * 帮我指出一些错误、提交 PR 的朋友们
-* 第 19 小节是由 @[Bill70058](https://github.com/puxiao/react-hook-tutorial/issues?q=is%3Apr+author%3ABill70058) 独立编写的
+* 第 19 小节是由 @[Bill70058](https://github.com/Bill70058) 独立编写的
 
 
 
