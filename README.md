@@ -7,7 +7,7 @@
 > 此时再回顾我半年前写的这系列文章，有几点现需要补充说明一下：
 >
 > 1. 强烈建议你在学习 hook 之前，先学习了解一下：JS 原型链、数据与结构中的 “链” 和 “树”。  
-补充强调一点：在 react 源码中，并不是使用 TypeScript，而是使用和 TS 非常类似的 flow 语法，flow 是 facebook 推出的一种 JS 静态类型检查器。我之前一直误会以为 React 源码是用 TS 写的。
+>    补充强调一点：在 react 源码中，并不是使用 TypeScript，而是使用和 TS 非常类似的 flow 语法，flow 是 facebook 推出的一种 JS 静态类型检查器。我之前一直误会以为 React 源码是用 TS 写的。
 > 2. 强烈推荐你先阅读我的另外一篇文章：[《自顶向下学习React源码》学习笔记#第一章：理念篇](https://github.com/puxiao/notes/blob/master/%E3%80%8A%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E5%AD%A6%E4%B9%A0React%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md) ，不需要精读，只需要大体了解一下 React 设计理念，会更加容易让你去理解 React 的渲染逻辑，利于理解 hook 。
 > 3. 本系列文章中，每一个 hook 中所列出来的该 hook 源码虽然出自 React 官方源码，但实际并不是真的 hook 源码，而仅仅是对 hook 实现的简单引用。
 >
@@ -77,6 +77,7 @@
 [16 自定义hook](https://github.com/puxiao/react-hook-tutorial/blob/master/16%20%E8%87%AA%E5%AE%9A%E4%B9%89hook.md)  
 [17 React Hook 总结](https://github.com/puxiao/react-hook-tutorial/blob/master/17%20React%20Hook%20%E6%80%BB%E7%BB%93.md)  
 [18 示例：React使用Echarts所用到的hooks](https://github.com/puxiao/react-hook-tutorial/blob/master/18%20%E7%A4%BA%E4%BE%8B%EF%BC%9AReact%E4%BD%BF%E7%94%A8Echarts%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84hooks.md)  
+[19 useTransition基础用法](https://github.com/puxiao/react-hook-tutorial/blob/master/19%20useTransition%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)  
 [附01：React基础知识](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8401%EF%BC%9AReact%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)  
 [附02：React扩展阅读](https://github.com/puxiao/react-hook-tutorial/blob/master/%E9%99%8402%EF%BC%9AReact%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.md)  
 
@@ -89,6 +90,21 @@
 恰恰是这些不同之处，有助你更加多角度理解 React Hook。  
 
 我写的这些教程只能作为你学习React Hook 众多参考资料中的其中一种。    
+
+
+
+<br>
+
+> 以下内容更新于 2022.12.08
+
+**特别感谢：**
+
+* 帮我指出一些错误、提交 PR 的朋友们
+* 第 19 小节是由 @[Bill70058](https://github.com/puxiao/react-hook-tutorial/issues?q=is%3Apr+author%3ABill70058) 独立编写的
+
+
+
+<br>
 
 
 ## 信息反馈
