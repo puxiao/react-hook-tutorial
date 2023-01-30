@@ -5,7 +5,7 @@
 
 在React 16.8版本以前，通常需要使用第三方Redux来管理React的公共数据，但自从 React Hook 概念出现以后，可以使用 useContext + useReducer 轻松实现 Redux 相似功能。这一部分会在 “useReducer高级用法” 中做详细讲解。  
 
-让我们回到useContext基础学习中。
+让我们回到useReducer基础学习中。
 
 
 ## useReducer是来解决什么问题的？
