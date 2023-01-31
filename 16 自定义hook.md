@@ -38,7 +38,7 @@
 
 在上面这个组件中，通过 const [count,setCount] = useState(0) 定义了组件内的变量count和修改count的方法。那我们现在将这行相关的hook抽离出函数组件。我们计划把抽离出来的、和count相关的函数，命名为useCount，修改后的代码如下：  
 
-    //useState.js
+    //useCount.js
     import {useState} from 'react'；
     function useCount(initialValue){
 
