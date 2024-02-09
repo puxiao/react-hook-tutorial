@@ -29,6 +29,12 @@
 在做了一些了解后，我决定选择学习React。不是Vue不好，而是据我了解，国内一线大厂使用React的更多一些。  
 
 
+<br>
+<p align="center">
+<img src="https://raw.githubusercontent.com/puxiao/notes/master/imgs/wechat.jpg" alt="wechat.jpg"/>
+</p>
+
+
 ## 学习 React Hook 过程
 
 当我决定开始学习React时，我先下载了一些React视频教程，对React、类组件开发有了基础的掌握，这个时候我接触到了 React Hook，当我稍微深入了解之后，发现 React Hook 函数组件开发才是 React 的最新主流趋势。  
